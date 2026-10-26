@@ -1,0 +1,391 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #301608;
+    padding: 20px 50px;
+}
+nav ul {
+    display: flex;
+    gap: 30px;
+     list-style: none;
+}
+nav ul a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+nav ul a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #EAC17B;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+nav ul a:hover{
+    color: #EAC17B;
+}
+nav ul a:hover::after {
+    width: 100%;
+}
+header img{
+    width: 100px;
+}
+
+
+
+
+
+
+
+
+
+.hero {
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.15)
+        ),url("../IMAGES/Caracóis\ à\ Portuguesa\ com\ Cerveja\ e\ Pão\ Tostado-1.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 60px;
+}
+.hero h1{
+    color: white;
+    font-size: 56px;
+    font-family: 'Playfair Display', serif;
+}
+.hero p{
+    color: white;
+    font-size: 20px;
+    animation-delay: 0.2s;
+}
+.hero a{
+    background-color: #EAC17B;
+    color: #301608;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation-delay: 0.4s;
+    animation: aparecerHero 1s ease-out 0.4s backwards;
+}
+.hero a:hover {
+    background-color: #d4a85f;
+    transform: translateY(-3px);
+}
+.hero h1,
+.hero p {
+    animation: aparecerHero 1s ease-out both;
+}
+
+
+
+
+
+
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+
+
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+.cards img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.cards article{
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cards article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+.cards article:hover img {
+    transform: scale(1.05);
+}
+.cards article h3,
+.cards article p {
+    padding: 0 15px;
+}
+.cards p{
+    color: #EAC17B;
+    font-weight: bold;
+}
+#menu {
+    padding: 60px 50px;
+}
+#menu h2{
+    text-align: center;
+    font-size: 36px;
+    color: #301608;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sobre{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 50px;
+}
+.sobre-texto{
+    flex: 1;
+}
+.sobre img{
+    flex: 1;
+    width: 50%;
+    min-width: 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.sobre img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+.sobre h2{
+    color: #301608;
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.sobre h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #EAC17B;
+    border-radius: 3px;
+}
+.sobre-texto p{
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+#novidades {
+    background-color: #301608;
+    padding: 80px 50px;
+    text-align: center;
+}
+#novidades h2{
+    color: #EAC17B;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+#novidades p{
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+}
+#novidades p:last-child {
+    color: #EAC17B;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#novidades img{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    margin: 20px 0px 30px 0px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#novidades img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(234, 193, 123, 0.35);
+}
+
+
+
+
+
+
+
+
+
+#contactos form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#contactos input,
+#contactos textarea{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#contactos button{
+    background-color: #EAC17B;
+    color: #301608;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#contactos button:hover{
+    background-color: #d4a85f;
+    transform: translateY(-3px);
+}
+#contactos{
+    background-color: #f8f5f0;
+    padding: 80px 50px;
+    text-align: center;
+}
+#contactos h2{
+    color: #301608;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#contactos label{
+    text-align: left;
+    font-weight: bold;
+    color: #301608;
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #301608;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    header{
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+    header nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1{
+        font-size: 32px;
+    }
+    .hero{
+        padding: 30px 20px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+    .sobre{
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .sobre img{
+        width: 100%;
+    }
+    #novidades h2{
+        font-size: 30px;
+    }
+    #novidades{
+        padding: 40px 20px;
+    }
+    #contactos{
+        padding: 40px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes aparecerHero {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
